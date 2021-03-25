@@ -1,5 +1,7 @@
 
 import './App.css';
+import * as d3 from "d3"
+import {arc} from "d3"
 
 const width=960;
 const height=500;
@@ -12,31 +14,46 @@ const eyeOffsetX = 90
 const eyeOffsetY = 100
 const eyeRadius = 40
 
+const mouthWidth = 20
+const mouthRadius = 140
+
+const mouthArc = d3.arc()
+    .innerRadius(mouthRadius)
+    .outerRadius(mouthRadius + mouthWidth)
+    .startAngle(Math.PI / 2)
+    .endAngle(Math.PI * 3/2);
+
 function App() {
+  
+  
   return (
     <div className="App">
       <header className="App-header">
+      <h2>For using ARC go to D3-shape</h2>
+      <a href="https://github.com/d3/d3-shape">d3-shape</a>
+      <p>Grouped elements by g for using arc</p>
        <svg width={width} height={height}>
-         <circle 
-          cx={centerX} 
-          cy={centerY}
-          r={r}
-          fill="yellow"
-          stroke="black"
-          stroke-width={strokeWidth}
-          />
-          <circle
-          cx={centerX - eyeOffsetX} 
-          cy={centerY - eyeOffsetY}
-          r={eyeRadius}
-          fill="black"
-          />
-          <circle
-          cx={centerX + eyeOffsetX} 
-          cy={centerY - eyeOffsetY}
-          r={eyeRadius}
-          fill="black"
-          />
+         <g transform={`translate(${centerX},${centerY})`}>
+          <circle             
+            r={r}
+            fill="yellow"
+            stroke="black"
+            stroke-width={strokeWidth}
+            />
+            <circle
+            cx={- eyeOffsetX}
+            cy={- eyeOffsetY}
+            r={eyeRadius}
+            fill="black"
+            />
+            <circle
+            cx={eyeOffsetX} 
+            cy={- eyeOffsetY}
+            r={eyeRadius}
+            fill="black"
+            />
+            <path d={mouthArc()}/>
+         </g>
        </svg>
       </header>
     </div>
