@@ -5,6 +5,7 @@ import './App.css';
 import {BackgroundCircle} from "./components/BackgroundCircle"
 import {Eyes} from "./components/Eyes"
 import {Mouth} from "./components/Mouth"
+import {FaceContainer} from './components/FaceContainer'
 
 const width=960;
 const height=500; 
@@ -21,16 +22,20 @@ const mouthWidth = 20
 const mouthRadius = 140
 
 
-function App() {  
-  
+
+function App() {    
   return (
     <div className="App">
       <header className="App-header">
-      <h2>For using ARC go to D3-shape</h2>
+      <h2>For using ARC go to D3-shape.</h2>
       <a href="https://github.com/d3/d3-shape">d3-shape</a>
       <p>Grouped elements by g for using arc</p>
-       <svg width={width} height={height}>
-         <g transform={`translate(${centerX},${centerY})`}>
+      <FaceContainer
+        width={width} 
+        height={height} 
+        centerX={centerX} 
+        centerY={centerY}
+      >
           <BackgroundCircle r={radius} strokeWidth={strokeWidth}/>
             <Eyes 
               eyeOffsetX={eyeOffsetX} 
@@ -38,8 +43,7 @@ function App() {
               eyeRadius={eyeRadius}
             />
             <Mouth mouthWidth={mouthWidth} mouthRadius={mouthRadius}/>
-         </g>
-       </svg>
+         </FaceContainer>
       </header>
     </div>
   );
