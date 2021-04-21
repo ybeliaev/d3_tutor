@@ -1,6 +1,6 @@
-export const BackgroundCircle = ({r, strokeWidth}) => (
+export const BackgroundCircle = ({radius, strokeWidth}) => (
     <circle             
-      r={r}
+      r={radius}
       fill="yellow"
       stroke="black"
       stroke-width={strokeWidth}
