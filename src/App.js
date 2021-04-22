@@ -1,12 +1,13 @@
+import React from 'react'
 
 import './App.css';
 // import * as d3 from "d3"
 // import {arc} from "d3"
 
-import { Face } from './components/face/Face';
+import Face  from './components/face';
 
-const width=960;
-const height=500; 
+const width=160;
+const height=160; 
 
 const strokeWidth = 10 
 const radius = height / 2 - strokeWidth / 2
@@ -29,11 +30,11 @@ function App() {
         centerY={height / 2}
         // r={radius} 
         strokeWidth={10}
-        eyeOffsetX={90} 
-        eyeOffsetY={100} 
-        eyeRadius={40}
-        mouthWidth={20} 
-        mouthRadius={140}
+        eyeOffsetX={30} 
+        eyeOffsetY={30} 
+        eyeRadius={10}
+        mouthWidth={10} 
+        mouthRadius={40}
       />
       </header>
     </div>
