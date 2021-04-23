@@ -4,17 +4,13 @@ import './App.css';
 // import * as d3 from "d3"
 // import {arc} from "d3"
 
+// import components
 import Face  from './components/face';
+import FetchCSV from './components/csv_data';
 
+// data constant
 const width=160;
 const height=160; 
-
-const strokeWidth = 10 
-const radius = height / 2 - strokeWidth / 2
-
-
-
-
 
 function App() {    
   return (
@@ -27,8 +23,7 @@ function App() {
         width={width}
         height={height}
         centerX={width / 2} 
-        centerY={height / 2}
-        // r={radius} 
+        centerY={height / 2}        
         strokeWidth={10}
         eyeOffsetX={30} 
         eyeOffsetY={30} 
@@ -36,6 +31,7 @@ function App() {
         mouthWidth={10} 
         mouthRadius={40}
       />
+      <FetchCSV />
       </header>
     </div>
   );
