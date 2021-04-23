@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default function FetchCSV() {
-    const URL = 'https://gist.githubusercontent.com/ybeliaev/e3e65a5135010936c4f359b9caf19260/raw/css_named_colors.csv'
+    // delete some numbers after raw:
+    const csvURL = 'https://gist.githubusercontent.com/ybeliaev/e3e65a5135010936c4f359b9caf19260/raw/css_named_colors.csv'
 
     // fetch(URL)
     //     .then((response) => response.text())
@@ -12,7 +13,7 @@ export default function FetchCSV() {
         return await response.text()
         
     }
-    fetchText(URL)
+    fetchText(csvURL).then(data => console.log(data))
   
     return (
         <div>

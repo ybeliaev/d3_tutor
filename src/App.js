@@ -16,9 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <h2>For using ARC go to D3-shape.</h2>
-      <a href="https://github.com/d3/d3-shape">d3-shape</a>
-      <p>Grouped elements by g for using arc</p>
+      
       <Face 
         width={width}
         height={height}
