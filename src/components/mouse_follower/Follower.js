@@ -5,9 +5,19 @@ const height= 960
 const circleX = width/2
 const circleY = height/2
 const circleRadius = 30
-export default function Follower() {
+
+const handleMouseMove = (event) => {
+    const {clientX, clientY} = event
+    console.log({clientX, clientY});
+}
+
+function Follower() {
     return (
-        <svg width={width} height={height}>
+        <svg 
+        width={width} 
+        height={height}
+        onMouseMove={handleMouseMove}
+        >
             <circle
                 cx={circleX}
                 cy={circleY}
@@ -16,3 +26,4 @@ export default function Follower() {
         </svg>
     )
 }
+export default  Follower

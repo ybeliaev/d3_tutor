@@ -7,6 +7,7 @@ import './App.css';
 // import components
 import Face  from './components/face';
 import FetchCSV from './components/csv_data';
+import Follower from './components/mouse_follower';
 
 // data constant
 const width=160;
@@ -15,8 +16,7 @@ const height=160;
 function App() {    
   return (
     <div className="App">
-      <header className="App-header">
-      
+      <header className="App-header">      
       <Face 
         width={width}
         height={height}
@@ -30,6 +30,7 @@ function App() {
         mouthRadius={40}
       />
       <FetchCSV />
+      <Follower />
       </header>
     </div>
   );
