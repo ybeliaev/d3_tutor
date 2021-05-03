@@ -1,17 +1,26 @@
-import React from 'react'
+import React, {useState, useCallback} from 'react'
 
 const width = 960
-const height= 960
-const circleX = width/2
-const circleY = height/2
-const circleRadius = 30
+const height= 560
 
-const handleMouseMove = (event) => {
-    const {clientX, clientY} = event
-    console.log({clientX, clientY});
+const circleRadius = 30
+const initialPosition = {
+    x: width/2,
+    y: height/2
 }
 
+
 function Follower() {
+    const [mousePosition, setMousePosition ] = useState(initialPosition)
+    const handleMouseMove = (event) => {
+        const {clientX, clientY} = event
+        
+        setMousePosition({
+            x: clientX,
+            y: clientY
+        })
+    }
+    console.log(mousePosition);
     return (
         <svg 
         width={width} 
@@ -19,8 +28,8 @@ function Follower() {
         onMouseMove={handleMouseMove}
         >
             <circle
-                cx={circleX}
-                cy={circleY}
+                cx={mousePosition.x}
+                cy={mousePosition.y}
                 r={circleRadius}
             />
         </svg>
