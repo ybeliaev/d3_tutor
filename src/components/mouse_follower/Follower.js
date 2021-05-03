@@ -12,14 +12,14 @@ const initialPosition = {
 
 function Follower() {
     const [mousePosition, setMousePosition ] = useState(initialPosition)
-    const handleMouseMove = (event) => {
+    const handleMouseMove = useCallback((event) => {
         const {clientX, clientY} = event
         
         setMousePosition({
             x: clientX,
             y: clientY
         })
-    }
+    }, [setMousePosition])
     console.log(mousePosition);
     return (
         <svg 
