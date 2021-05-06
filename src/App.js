@@ -17,20 +17,20 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">      
-      <Face 
-        width={width}
-        height={height}
-        centerX={width / 2} 
-        centerY={height / 2}        
-        strokeWidth={10}
-        eyeOffsetX={30} 
-        eyeOffsetY={30} 
-        eyeRadius={10}
-        mouthWidth={10} 
-        mouthRadius={40}
-      />
-      <FetchCSV />
-      <Follower />
+        <Face 
+          width={160}
+          height={160}
+          centerX={width / 2} 
+          centerY={height / 2}        
+          strokeWidth={10}
+          eyeOffsetX={30} 
+          eyeOffsetY={30} 
+          eyeRadius={10}
+          mouthWidth={10} 
+          mouthRadius={40}
+        />
+        <FetchCSV />
+        <Follower />
       </header>
     </div>
   );
