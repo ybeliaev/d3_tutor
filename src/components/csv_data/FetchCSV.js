@@ -1,6 +1,6 @@
 import React from 'react'
 import * as d3 from "d3"
-import { doc } from 'prettier'
+
 
 export default function FetchCSV() {
     // delete some numbers after raw:
