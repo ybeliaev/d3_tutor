@@ -1,22 +1,19 @@
 import React from 'react'
 import * as d3 from "d3"
+import { CSV_URL } from '../constants'
 
 
 export default function FetchCSV() {
-    // delete some numbers after raw:
-    const CSV_URL = 'https://gist.githubusercontent.com/ybeliaev/e3e65a5135010936c4f359b9caf19260/raw/css_named_colors.csv'
-
 // use csv method from d3-dsv
-
-d3.csv(CSV_URL).then(
-    data => {
-        let message = ''
-        message = message + Math.round(d3.csvFormat(data).length/1024) + ' kB\n'
-        message = message + data.length + ' rows\n'
-        message = message + data.columns.length + ' columns'
-        document.getElementById('message-container').textContent = message
-    }
-)
+    d3.csv(CSV_URL).then(
+        data => {
+            let message = ''
+            message = message + Math.round(d3.csvFormat(data).length/1024) + ' kB\n'
+            message = message + data.length + ' rows\n'
+            message = message + data.columns.length + ' columns'
+            document.getElementById('message-container').textContent = message
+        }
+    )
 // first/basic variant fetch
     // fetch(URL)
     //     .then((response) => response.text())
@@ -40,7 +37,7 @@ d3.csv(CSV_URL).then(
         <div>
             <h2>Loading and parsing CSV data.</h2>
             <h3>Adding d3-dsv</h3>
-            <a href="https://github.com/d3/d3-dsv">Link d3-dsv</a>
+            <a href="https://github.com/d3/d3-dsv">Link d3-csv</a>
             <pre id="message-container"></pre>
         </div>
     )

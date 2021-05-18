@@ -31,6 +31,7 @@ function App() {
         />
         <FetchCSV />
         <Follower />
+        <p>Time finish: </p>
       </header>
     </div>
   );

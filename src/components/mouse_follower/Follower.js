@@ -1,15 +1,12 @@
-import React, {useState, useCallback, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import * as d3 from 'd3'
 
-const CSV_URL = 'https://gist.githubusercontent.com/ybeliaev/e3e65a5135010936c4f359b9caf19260/raw/css_named_colors.csv'
+import {message} from './message'
+import { CSV_URL } from '../constants'
 
-const message = data => {
-    let message = ''
-    message = message + Math.round(d3.csvFormat(data).length/1024) + ' kB\n'
-    message = message + data.length + ' rows\n'
-    message = message + data.columns.length + ' columns'
-    return message
-}
+
+
+
 
 function Follower() {
     const [data, setData ] = useState(null)
