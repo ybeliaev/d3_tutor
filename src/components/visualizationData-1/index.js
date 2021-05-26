@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import {csv} from 'd3'
 import { CSV_URL } from '../constants'
+import DataLoader from '../dataLoader'
 
 
 export default function VisualizationData1() {
@@ -14,7 +15,7 @@ export default function VisualizationData1() {
             setData(newArr)
         })
     },[])
-    if(!data) return <pre>Loading..</pre>
+    if(!data) return <DataLoader />
     console.log("Data colors MDN: ", data[0])
     return (
         <div className='div_visual'>

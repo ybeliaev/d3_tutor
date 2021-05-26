@@ -3,6 +3,7 @@ import * as d3 from 'd3'
 
 import {message} from './message'
 import { CSV_URL } from '../constants'
+import DataLoader from '../dataLoader'
 
 
 
@@ -20,7 +21,7 @@ function Follower() {
     }, [])
     
     return (
-        <div>Data is {data ? message(data) : 'loading...'}</div>
+        <div>Data is {data ? message(data) : <DataLoader/>}</div>
     )
 }
 export default  Follower
