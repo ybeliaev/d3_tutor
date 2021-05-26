@@ -29,9 +29,12 @@ function App() {
           mouthWidth={10} 
           mouthRadius={40}
         />
+        <hr/>
         <FetchCSV />
+        <hr/>
         <Follower />
-        <p>Time finish: </p>
+        <hr/>
+        <p>Time finish: 4:26</p>
       </header>
     </div>
   );
