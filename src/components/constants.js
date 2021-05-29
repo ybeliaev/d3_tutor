@@ -1,1 +1,2 @@
 export const CSV_URL = 'https://gist.githubusercontent.com/ybeliaev/e3e65a5135010936c4f359b9caf19260/raw/css_named_colors.csv'
+export const POPULATION_URL = 'https://gist.githubusercontent.com/ybeliaev/cc510b294b6067cc5c88c7e2aee7190d/raw/world_population.csv'

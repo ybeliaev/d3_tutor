@@ -9,6 +9,7 @@ import Face  from './components/face';
 import FetchCSV from './components/csv_data';
 import Follower from './components/mouse_follower';
 import VisualizationData1 from './components/visualizationData-1';
+import Population from './components/population';
 
 // data constant
 const width=160;
@@ -36,7 +37,8 @@ function App() {
         <Follower />
         <hr/>
         <VisualizationData1 />
-        <p>Time finish: 4:26</p>
+        <Population />
+        <p>Time finish: 4:56</p>
       </header>
     </div>
   );
