@@ -1,5 +1,7 @@
+import React from 'react'
+
 export const Eyes = ({eyeOffsetX, eyeOffsetY,eyeRadius}) => (
-    <>
+    <React.Fragment>
         <circle
             cx={- eyeOffsetX}
             cy={- eyeOffsetY}
@@ -12,5 +14,5 @@ export const Eyes = ({eyeOffsetX, eyeOffsetY,eyeRadius}) => (
             r={eyeRadius}
             fill="black"
         />
-    </>
+    </React.Fragment>
 )

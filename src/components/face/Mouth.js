@@ -1,3 +1,5 @@
+import React from 'react'
+
 import * as d3 from "d3"
 
 export const Mouth = ({mouthRadius, mouthWidth}) => {
@@ -7,5 +9,5 @@ export const Mouth = ({mouthRadius, mouthWidth}) => {
         .startAngle(Math.PI / 2)
         .endAngle(Math.PI * 3/2);
 
-    return <path d={mouthArc()}/>
+    return <path d={mouthArc()}></path>
 }

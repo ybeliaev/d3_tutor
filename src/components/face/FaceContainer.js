@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 export const FaceContainer = ({children, width, height, centerX, centerY}) => {
     return (
